@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="kk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жетісуға саяхат: Табиғат маржаны</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: '#E2725B',
+                        sand: '#E3C191',
+                        warmRed: '#C84B31',
+                        burgundy: '#800020',
+                        deepOrange: '#D9534F'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAFAFA;
+        }
+        .text-dense {
+            text-align: justify;
+            hyphens: auto;
+        }
+        /* Custom warm scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fdf5e6; }
+        ::-webkit-scrollbar-thumb { background: #E2725B; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C84B31; }
+        
+        .hero-pattern {
+            background-color: #800020;
+            background-image: radial-gradient(at 0% 0%, hsla(21,100%,65%,1) 0, transparent 50%), radial-gradient(at 100% 100%, hsla(11,81%,42%,1) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased leading-relaxed">
+
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 bg-white/95 backdrop-blur-md border-b border-orange-100 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-serif font-bold text-warmRed tracking-wide">
+                ЖЕТІСУ<span class="text-terracotta">.ТУР</span>
+            </div>
+            <nav class="mt-4 md:mt-0 flex space-x-4 md:space-x-8 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-warmRed transition-colors">Аймақ туралы</a>
+                <a href="#locations" class="hover:text-warmRed transition-colors">Локациялар</a>
+                <a href="#tour" class="hover:text-warmRed transition-colors">Тур бағдарламасы</a>
+                <a href="#booking" class="bg-warmRed text-white px-4 py-2 rounded-full hover:bg-burgundy transition-colors shadow-md">Броньдау</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 hero-pattern overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
+            <p class="uppercase tracking-[0.3em] text-sm md:text-base mb-4 text-sand font-medium">Бір сапар. Төрт әлем.</p>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight drop-shadow-lg">
+                Жетісуға саяхат: <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-sand via-orange-300 to-white">Табиғат маржаны</span>
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-orange-50 drop-shadow-md font-light">
+                Құмды шөлдерден бастап мәңгілік мұздықтарға дейінгі ұмытылмас шытырман оқиғаға тап болыңыз. Қазақстанның ең бай табиғи өлкесі сізді күтеді.
+            </p>
+            <a href="#tour" class="inline-block bg-gradient-to-r from-terracotta to-warmRed text-white font-semibold px-8 py-4 rounded-full text-lg shadow-xl shadow-red-900/30 hover:scale-105 transition-transform duration-300 border border-red-400/50">
+                Тур бағдарламасымен танысу
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="py-20 bg-orange-50/50 scroll-mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-burgundy mb-4">Жетісу туралы не білеміз?</h2>
+                <div class="w-24 h-1 bg-terracotta mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-lg text-gray-700 text-dense leading-relaxed font-light">
+                    <p>
+                        <strong class="text-warmRed font-semibold">Жетісу (Семиречье)</strong> — Қазақстанның оңтүстік-шығысында орналасқан, табиғи ландшафттарының алуантүрлілігімен танымал бірегей тарихи-географиялық аймақ. Балқаш көліне құятын жеті өзен (Іле, Қаратал, Биен, Ақсу, Лепсі, Басқан, Сарқан) бұл өлкенің экожүйесінің негізін қалайды.
+                    </p>
+                    <p>
+                        Бұл жерде сіз бір күннің ішінде шұрайлы жазықтар мен құмды шөлдерді (Мойынқұм), тау бөктеріндегі альпі шалғындары мен Тянь-Шань тауларының қарлы шыңдарын көре аласыз. Жетісу тек табиғатымен ғана емес, Ұлы Жібек жолының маңызды дәлізі болған тарихи мұрасымен де құнды.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                        <span class="text-4xl mb-2 text-terracotta">🏔️</span>
+                        <h4 class="font-bold text-gray-800">Төрт климаттық белдеу</h4>
+                        <p class="text-sm text-gray-500 mt-2">Шөлден мұздықтарға дейін</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col items-center text-center mt-8">
+                        <span class="text-4xl mb-2 text-terracotta">🌊</span>
+                        <h4 class="font-bold text-gray-800">Жеті өзен</h4>
+                        <p class="text-sm text-gray-500 mt-2">Аймақтың өмір нәрі</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col items-center text-center -mt-8">
+                        <span class="text-4xl mb-2 text-terracotta">🐪</span>
+                        <h4 class="font-bold text-gray-800">Ұлы Жібек жолы</h4>
+                        <p class="text-sm text-gray-500 mt-2">Тарихи мұра мен қалашықтар</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                        <span class="text-4xl mb-2 text-terracotta">🦅</span>
+                        <h4 class="font-bold text-gray-800">Эндемиктер</h4>
+                        <p class="text-sm text-gray-500 mt-2">Сирек кездесетін флора мен фауна</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Locations -->
+    <section id="locations" class="py-24 bg-white scroll-mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-burgundy mb-4">Басты көрікті жерлер</h2>
+                <p class="text-gray-500">Маршрут барысында сіз көретін табиғат ғажайыптары</p>
+                <div class="w-24 h-1 bg-terracotta mx-auto rounded mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group bg-orange-50/30 rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/E2725B/FFFFFF?text=Шарын+шатқалы" alt="Шарын" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-warmRed mb-2">Шарын шатқалы</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20 overflow-hidden text-dense">
+                            «Азияның Үлкен каньоны». Жел мен судың әсерінен 12 миллион жыл бұрын қалыптасқан «Қамалдар аңғары» өзінің қызыл-сары жартастарымен таң қалдырады.
+                        </p>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-terracotta bg-orange-100 px-3 py-1 rounded-full">Геология</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-orange-50/30 rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Көлсай+көлдері" alt="Көлсай" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-warmRed mb-2">Көлсай көлдері</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20 overflow-hidden text-dense">
+                            «Солтүстік Тянь-Шаньнің меруерті». Қарағайлы ормандармен қоршалған, тұп-тұнық суы бар тау көлдерінің жүйесі. Треккинг үшін таптырмас орын.
+                        </p>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-terracotta bg-orange-100 px-3 py-1 rounded-full">Тау көлдері</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-orange-50/30 rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Қайыңды+көлі" alt="Қайыңды" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-warmRed mb-2">Қайыңды көлі</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20 overflow-hidden text-dense">
+                            1911 жылғы жер сілкінісінен пайда болған су асты орманы. Су бетіне шығып тұрған шырша діңгектері мистикалық әрі қайталанбас пейзаж жасайды.
+                        </p>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-terracotta bg-orange-100 px-3 py-1 rounded-full">Экология</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-orange-50/30 rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Алтын+Емел" alt="Алтын Емел" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-warmRed mb-2">Алтын Емел</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20 overflow-hidden text-dense">
+                            Әйгілі «Айғайқұм» (әнші бархан) мен Ақтау, Қатутау борлы таулары орналасқан ұлттық табиғи парк. Палеонтологиялық олжаларға бай аймақ.
+                        </p>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-terracotta bg-orange-100 px-3 py-1 rounded-full">Шөл дала</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Tour Package -->
+    <section id="tour" class="py-24 bg-sand/10 scroll-mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="uppercase tracking-widest text-warmRed font-semibold mb-2">Эксклюзивті ұсыныс</p>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-burgundy mb-6">Жетісу жауһарлары: 3 күн / 2 түн</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-light">Сіздің уақытыңызды барынша тиімді пайдалануға арналған, табиғатпен етене араласатын арнайы авторлық маршрут.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Itinerary -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Тур бағдарламасы
+                    </h3>
+                    
+                    <!-- Day 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-warmRed">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-bold text-burgundy">1-ші күн: Каньондар құпиясы</h4>
+                            <span class="bg-orange-100 text-warmRed px-3 py-1 text-sm font-semibold rounded-full">Алматы - Саты</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 text-sm font-light">
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 08:00 – Алматы қаласынан жайлы микроавтобуспен шығу.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 11:30 – Шарын шатқалына келу. «Қамалдар аңғары» бойымен жаяу серуендеу.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 13:30 – Шатқал маңындағы пикник-ланч.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 17:00 – Саты ауылына жету. Қонақ үйге/эко-үйге орналасу.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 19:00 – Кешкі ас және алау жанындағы еркін уақыт.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-terracotta">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-bold text-burgundy">2-ші күн: Көлдер симфониясы</h4>
+                            <span class="bg-orange-100 text-warmRed px-3 py-1 text-sm font-semibold rounded-full">Көлсай & Қайыңды</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 text-sm font-light">
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 08:30 – Таңғы ас.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 09:30 – Қайыңды көліне жол талғамайтын көлікпен (УАЗ) бару.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 13:00 – Саты ауылында түскі ас.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 15:00 – Төменгі Көлсай көліне саяхат. Катамаранмен серуендеуге немесе атқа мінуге болады.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 19:30 – Қонақ үйге оралу, кешкі ас, ұлттық дәстүрлермен танысу.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-sand">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-bold text-burgundy">3-ші күн: Құмның әні</h4>
+                            <span class="bg-orange-100 text-warmRed px-3 py-1 text-sm font-semibold rounded-full">Алтын Емел - Алматы</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 text-sm font-light">
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 07:00 – Ерте таңғы ас және жолға шығу.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 11:30 – Алтын Емел ұлттық паркі. «Айғайқұм» барханына көтерілу.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 14:00 – Басшы ауылында түскі ас.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 15:30 – 700 жылдық киелі ағашқа (Тал) бару.</li>
+                            <li class="flex items-start"><span class="text-terracotta mr-2">✓</span> 21:00 – Алматы қаласына оралу.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Inclusion / Price Box -->
+                <div class="lg:col-span-1">
+                    <div class="bg-burgundy text-white rounded-3xl p-8 shadow-2xl sticky top-24">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Тур құны</h3>
+                        <div class="text-4xl font-bold text-sand mb-6">
+                            75 000 ₸ <span class="text-sm font-normal text-gray-300">/ адамға</span>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-orange-200 mb-3 uppercase text-xs tracking-wider border-b border-white/20 pb-2">Құнына кіреді:</h4>
+                                <ul class="space-y-2 text-sm text-gray-100">
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> Жайлы көлікпен трансфер</li>
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> Барлық экопосттар мен кіру билеттері</li>
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> Кәсіби гид-экскурсовод</li>
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> Саты ауылында қонақ үйде 2 түн</li>
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> Тамақтану: 2 таңғы ас, 2 кешкі ас</li>
+                                    <li class="flex items-center"><span class="text-sand mr-2">✔</span> УАЗбен Қайыңдыға көтерілу</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-gray-400 mb-3 uppercase text-xs tracking-wider border-b border-white/20 pb-2">Құнына кірмейді:</h4>
+                                <ul class="space-y-2 text-sm text-gray-300">
+                                    <li class="flex items-center"><span class="text-gray-500 mr-2">✖</span> Жолдағы түскі астар</li>
+                                    <li class="flex items-center"><span class="text-gray-500 mr-2">✖</span> Жеке шығындар (сувенирлер)</li>
+                                    <li class="flex items-center"><span class="text-gray-500 mr-2">✖</span> Атпен серуендеу қызметі</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#booking" class="block w-full bg-sand text-burgundy text-center font-bold py-4 rounded-xl mt-8 hover:bg-white transition-colors duration-300">
+                            Орынды броньдау
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Booking Form -->
+    <section id="booking" class="py-24 bg-white scroll-mt-16">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white border-2 border-orange-100 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-orange-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-red-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-serif font-bold text-burgundy mb-3">Турға өтінім қалдыру</h2>
+                        <p class="text-gray-500">Мәліметтеріңізді қалдырыңыз, біздің менеджерлер сізбен байланысып, турдың күнін нақтылайды.</p>
+                    </div>
+
+                    <div id="successMessage" class="hidden bg-green-50 border border-green-200 text-green-700 p-6 rounded-xl text-center mb-6">
+                        <span class="text-3xl block mb-2">🎉</span>
+                        <h4 class="font-bold text-xl mb-1">Рақмет! Өтініміңіз қабылданды.</h4>
+                        <p class="text-sm">Жақын арада сізбен хабарласамыз.</p>
+                    </div>
+
+                    <form id="bookingForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Аты-жөніңіз</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-terracotta focus:border-terracotta outline-none transition-all" placeholder="Мысалы, Азамат">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Телефон нөмірі</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-terracotta focus:border-terracotta outline-none transition-all" placeholder="+7 (777) 000 00 00">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Қалаулы күн</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-terracotta focus:border-terracotta outline-none transition-all text-gray-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Адам саны</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-terracotta focus:border-terracotta outline-none transition-all bg-white">
+                                    <option>1 адам</option>
+                                    <option>2 адам</option>
+                                    <option>3 адам</option>
+                                    <option>4+ адам</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Қосымша тілектер (міндетті емес)</label>
+                            <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-terracotta focus:border-terracotta outline-none transition-all" placeholder="Тамақтану бойынша ерекшеліктер немесе басқа сұрақтар..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-warmRed to-burgundy text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                            Өтінімді жіберу
+                        </button>
+                        <p class="text-xs text-center text-gray-400 mt-4">Түймені басу арқылы сіз жеке деректерді өңдеуге келісім бересіз.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-burgundy">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="text-2xl font-serif font-bold text-white mb-4">
+                    ЖЕТІСУ<span class="text-terracotta">.ТУР</span>
+                </div>
+                <p class="text-sm text-gray-400 max-w-sm mb-6">
+                    Бізбен бірге Қазақстанның ең әдемі бұрыштарына саяхаттаңыз. Жайлылық, қауіпсіздік және ұмытылмас әсерлерге кепілдік береміз.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Байланыс</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-sand transition-colors">📞 +7 (700) 123 45 67</a></li>
+                    <li><a href="#" class="hover:text-sand transition-colors">✉️ info@zhetysu.tour</a></li>
+                    <li><a href="#" class="hover:text-sand transition-colors">📍 Алматы қ., Абай даңғылы, 10</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Әлеуметтік желілер</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-terracotta transition-colors text-xl">📸</a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-terracotta transition-colors text-xl">📱</a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-terracotta transition-colors text-xl">▶️</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
+            &copy; 2026 Жетісу.Тур. Барлық құқықтар қорғалған.
+        </div>
+    </footer>
+
+    <script>
+        // Handle form submission to show a nice success message without using alert()
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.remove('hidden');
+            successMsg.classList.add('block', 'animate-fade-in');
+        });
+    </script>
+</body>
+</html>
